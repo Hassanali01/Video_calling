@@ -33,4 +33,8 @@ io.on("connection", (socket) => {
   });
 });
 
-server.listen(process.env.PORT || 3030);
+// Start the server and log that it's running
+const PORT = process.env.PORT || 3030;
+server.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
